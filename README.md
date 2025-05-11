@@ -2,8 +2,9 @@
 
 HiveMQ datahub modules
 
-**add to broker config file to enable:**
+**add to broker config file to enable:
 
+```xml
 <data-hub>
     <modules>
         <registries>
@@ -16,3 +17,5 @@ HiveMQ datahub modules
         </registries>
     </modules>
 </data-hub>
+
+```
