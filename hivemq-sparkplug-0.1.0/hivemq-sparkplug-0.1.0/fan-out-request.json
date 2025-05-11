@@ -1,0 +1,7 @@
+#set( $fanout = "#include('fan-out.js')")
+{
+  "id": "${instanceId}-fanout-script",
+  "functionType": "TRANSFORMATION",
+  "description": "The script transforms incoming Sparkplug metrics into sub metrics - one metric per topic",
+  "source": "$base64.encode($fanout)"
+}

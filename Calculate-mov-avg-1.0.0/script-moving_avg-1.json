@@ -1,0 +1,8 @@
+#set( $script = "#include('script-moving_avg-1-source.js')")
+{
+  "id" : "${instanceId}-moving_avg-1",
+  "version" : 1,
+  "createdAt" : "2025-05-01T18:37:30.980Z",
+  "functionType" : "TRANSFORMATION",
+  "source" : "$base64.encode($script)"
+}

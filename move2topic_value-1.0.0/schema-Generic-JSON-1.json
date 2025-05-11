@@ -1,0 +1,8 @@
+#set( $schema = "#include('schema-Generic-JSON-1-definition.json')")
+{
+  "id" : "${instanceId}-Generic-JSON-1",
+  "version" : 1,
+  "createdAt" : "2025-05-01T10:01:18.248Z",
+  "type" : "JSON",
+  "schemaDefinition" : "$base64.encode($schema)"
+}

@@ -1,0 +1,8 @@
+#set( $schema = "#include('schema-temp_avg_schema-1-definition.json')")
+{
+  "id" : "${instanceId}-temp_avg_schema-1",
+  "version" : 1,
+  "createdAt" : "2025-05-01T18:37:30.439Z",
+  "type" : "JSON",
+  "schemaDefinition" : "$base64.encode($schema)"
+}

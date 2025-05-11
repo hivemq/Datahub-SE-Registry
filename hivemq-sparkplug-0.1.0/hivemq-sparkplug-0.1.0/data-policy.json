@@ -1,0 +1,77 @@
+{
+  "id": "${instanceId}-sparkplug-to-json",
+  "matching": {
+    "topicFilter": "${topicPrefix}"
+  },
+  "validation": {
+    "validators": [
+      {
+        "type": "schema",
+        "arguments": {
+          "strategy": "ANY_OF",
+          "schemas": [
+            {
+              "schemaId": "${instanceId}-input-sparkplug-schema",
+              "version": "latest"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "onSuccess": {
+    "pipeline": [
+      {
+        "id": "operation-deserialize",
+        "functionId": "Serdes.deserialize",
+        "arguments": {
+          "schemaId": "${instanceId}-input-sparkplug-schema",
+          "schemaVersion": "latest"
+        }
+      },
+      #if( ${fanoutMetrics} )
+      {
+        "id": "operation-ek2Mx",
+        "functionId": "fn:${instanceId}-fanout-script:latest",
+        "arguments": {},
+        "onBranch": [
+          {
+            "branchId": "fanout",
+            "pipeline": [
+              {
+                "id": "operation-serialize",
+                "functionId": "Serdes.serialize",
+                "arguments": {
+                  "schemaId": "${instanceId}-output-sparkplug-schema",
+                  "schemaVersion": "latest"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      #end
+      {
+        "id": "operation-serialize",
+        "functionId": "Serdes.serialize",
+        "arguments": {
+          "schemaId": "${instanceId}-output-sparkplug-schema",
+          "schemaVersion": "latest"
+        }
+      }
+    ]
+  },
+  "onFailure": {
+    "pipeline": [
+      #if( ${incrementMetricForFailedMessages} )
+      {
+        "id": "operation-increment-metric-failure",
+        "functionId": "Metrics.Counter.increment",
+        "arguments": {
+          "metricName": "${metricNameForFailedMessages}"
+        }
+    }
+    #end
+  ]
+  }
+}

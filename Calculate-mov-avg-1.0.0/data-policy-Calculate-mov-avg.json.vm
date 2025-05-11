@@ -1,0 +1,65 @@
+{
+  "id" : "${instanceId}-Calculate-mov-avg",
+  "createdAt" : "2025-05-01T18:41:40.320Z",
+  "lastUpdatedAt" : "2025-05-01T18:41:40.320Z",
+  "matching" : {
+    "topicFilter" : "#"
+  },
+  "validation" : {
+    "validators" : [ {
+      "type" : "schema",
+      "arguments" : {
+        "strategy" : "ALL_OF",
+        "schemas" : [ {
+          "schemaId" : "${instanceId}-temp_schema-1",
+          "version" : "latest"
+        } ]
+      }
+    } ]
+  },
+  "onSuccess" : {
+    "pipeline" : [ {
+      "id" : "operation-2cwY1",
+      "functionId" : "System.log",
+      "arguments" : {
+        "level" : "WARN",
+        "message" : "Incoming message on ${topic} from ${clientId} matched schema"
+      }
+    }, {
+      "id" : "operation-JZJHl",
+      "functionId" : "Serdes.deserialize",
+      "arguments" : {
+        "schemaVersion" : "latest",
+        "schemaId" : "${instanceId}-temp_schema-1"
+      }
+    }, {
+      "id" : "operation-V64H5",
+      "functionId" : "fn:${instanceId}-moving_avg-1:latest",
+      "arguments" : { }
+    }, {
+      "id" : "operation-zJ1GK",
+      "functionId" : "Serdes.serialize",
+      "arguments" : {
+        "schemaVersion" : "latest",
+        "schemaId" : "${instanceId}-temp_avg_schema-1"
+      }
+    } ]
+  },
+  "onFailure" : {
+    "pipeline" : [ {
+      "id" : "operation-Wpo8d",
+      "functionId" : "System.log",
+      "arguments" : {
+        "level" : "WARN",
+        "message" : "Incoming payload from ${clientId} from ${clientId}  did not match schema definition, redirecting to Poison Queue ..."
+      }
+    }, {
+      "id" : "operation-tuBJN",
+      "functionId" : "Delivery.redirectTo",
+      "arguments" : {
+        "topic" : "PoisonQ",
+        "applyPolicies" : false
+      }
+    } ]
+  }
+}

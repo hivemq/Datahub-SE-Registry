@@ -1,0 +1,29 @@
+{
+  "type" : "object",
+  "properties" : {
+    "topicPrefix" : {
+      "type" : "string",
+      "default" : "spBv1.0/+/DDATA/+/+",
+      "title" : "Topic Prefix",
+      "description" : "The topic prefix under the Sparkplug namespace is defined."
+    },
+    "fanoutMetrics": {
+      "type": "boolean",
+      "default": true,
+      "title": "Fan out Sparkplug metrics",
+      "description": "The Sparkplug metrics should be published on individual sub-topics (metrics fan-out)"
+    },
+    "incrementMetricForFailedMessages" : {
+      "type" : "boolean",
+      "default" : true,
+      "title" : "Increment Metric",
+      "description" : "Increment the custom metric for invalid SparkplugB messages."
+    },
+    "metricNameForFailedMessages" : {
+      "type" : "string",
+      "default" : "failed-sparkplugb-messages",
+      "title" : "Metric Name",
+      "description" : "The metric name to be used to keep track of failed SparkplugB messages."
+    }
+  }
+}

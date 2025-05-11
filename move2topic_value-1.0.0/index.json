@@ -1,0 +1,32 @@
+{
+  "name" : "move2topic_value",
+  "version" : "1.0.0",
+  "resources" : {
+    "files" : [ {
+      "name" : "move2topic_value",
+      "path" : "data-policy-move2topic_value.json.vm",
+      "type" : "application/vnd+hivemq.data-policy+json"
+    }, {
+      "name" : "Generic-JSON-1",
+      "path" : "schema-Generic-JSON-1.json",
+      "type" : "application/vnd+hivemq.schema+json"
+    }, {
+      "name" : "in-schema-1",
+      "path" : "schema-in-schema-1.json",
+      "type" : "application/vnd+hivemq.schema+json"
+    }, {
+      "name" : "TopicValue2Topic-1",
+      "path" : "script-TopicValue2Topic-1.json",
+      "type" : "application/vnd+hivemq.script+json"
+    } ]
+  },
+  "description" : "move2topic_value",
+  "requiredSystemVersions" : [ "hivemq-enterprise/4.39.0" ],
+  "icon" : null,
+  "maintainers" : [ {
+    "name" : "Kamiel Straatman",
+    "email" : "kamiel.styraatman@hivemq.com",
+    "url" : null
+  } ],
+  "availableForLicenses" : [ "light", "full" ]
+}

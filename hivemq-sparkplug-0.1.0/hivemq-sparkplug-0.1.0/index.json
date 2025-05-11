@@ -1,0 +1,38 @@
+{
+  "name": "hivemq-sparkplug",
+  "description": "The Data Hub Sparkplug module offers essential functionalities such as schema validation, Protobuf to JSON conversion, metric fan-out, and flexible topic structure. These capabilities enable data format conformity, simplify data integration, ensure relevant data for consumers, and allow for flexible topic structuring.",
+  "maintainers": [
+    {
+      "name": "HiveMQ"
+    }
+  ],
+  "version": "0.1.0",
+  "icon": "",
+  "requiredSystemVersions": [
+    "hivemq-enterprise/4.30.0"
+  ],
+  "resources": {
+    "files": [
+      {
+        "type": "application/vnd+hivemq.schema+json",
+        "path": "in-schema.json",
+        "name": "The source schema"
+      },
+      {
+        "type": "application/vnd+hivemq.schema+json",
+        "path": "out-schema.json",
+        "name": "The destination schema"
+      },
+      {
+        "type": "application/vnd+hivemq.data-policy+json",
+        "path": "data-policy.json",
+        "name": "Data policy converting Sparkplug Messages"
+      },
+      {
+        "type": "application/vnd+hivemq.script+json",
+        "path": "fan-out-request.json",
+        "name": "Data policy converting Sparkplug Messages"
+      }
+    ]
+  }
+}

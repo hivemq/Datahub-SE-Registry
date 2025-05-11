@@ -1,0 +1,55 @@
+{
+  "id" : "${instanceId}-move2topic_value",
+  "createdAt" : "2025-05-01T10:07:03.408Z",
+  "lastUpdatedAt" : "2025-05-01T10:07:03.408Z",
+  "matching" : {
+    "topicFilter": "${topicFilter}"
+  },
+  "validation" : {
+    "validators" : [ ]
+  },
+  "onSuccess" : {
+    "pipeline" : [ {
+      "id" : "operation-H8pPt",
+      "functionId" : "System.log",
+      "arguments" : {
+        "level" : "WARN",
+        "message" : "succesfull ${topic}"
+      }
+    }, {
+      "id" : "operation-bTz6K",
+      "functionId" : "Serdes.deserialize",
+      "arguments" : {
+        "schemaVersion" : "latest",
+        "schemaId" : "${instanceId}-in-schema-1"
+      }
+    }, {
+      "id" : "operation-WBieY",
+      "functionId" : "fn:${instanceId}-TopicValue2Topic-1:latest",
+      "arguments" : { }
+    }, {
+      "id" : "operation-T2JMs",
+      "functionId" : "Serdes.serialize",
+      "arguments" : {
+        "schemaVersion" : "latest",
+        "schemaId" : "${instanceId}-Generic-JSON-1"
+      }
+    } ]
+  },
+  "onFailure" : {
+    "pipeline" : [ {
+      "id" : "operation-mO0dS",
+      "functionId" : "System.log",
+      "arguments" : {
+        "level" : "WARN",
+        "message" : "Schema fail on ${topic}"
+      }
+    }, {
+      "id" : "operation-bVl36",
+      "functionId" : "Mqtt.drop",
+      "arguments" : {
+        "reasonString" : "schema failure, message dropped off topic ${topic}"
+      }
+    } ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name" : "Calculate-mov-avg",
+  "version" : "1.0.0",
+  "resources" : {
+    "files" : [ {
+      "name" : "Calculate-mov-avg",
+      "path" : "data-policy-Calculate-mov-avg.json.vm",
+      "type" : "application/vnd+hivemq.data-policy+json"
+    }, {
+      "name" : "temp_schema-1",
+      "path" : "schema-temp_schema-1.json",
+      "type" : "application/vnd+hivemq.schema+json"
+    }, {
+      "name" : "temp_avg_schema-1",
+      "path" : "schema-temp_avg_schema-1.json",
+      "type" : "application/vnd+hivemq.schema+json"
+    }, {
+      "name" : "moving_avg-1",
+      "path" : "script-moving_avg-1.json",
+      "type" : "application/vnd+hivemq.script+json"
+    } ]
+  },
+  "description" : "Calculate-mov-avg",
+  "requiredSystemVersions" : [ "hivemq-enterprise/4.38.0" ],
+  "icon" : null,
+  "maintainers" : [ {
+    "name" : "Kamiel Straatman",
+    "email" : "Kamiel.straatman@hivemq.com",
+    "url" : "www.hivemq.com"
+  } ],
+  "availableForLicenses" : [ "light", "full" ]
+}

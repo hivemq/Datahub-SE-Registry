@@ -1,0 +1,9 @@
+#set( $script = "#include('script-TopicValue2Topic-1-source.js')")
+{
+  "id" : "${instanceId}-TopicValue2Topic-1",
+  "version" : 1,
+  "createdAt" : "2025-05-01T10:03:40.186Z",
+  "description" : "TopicValue2Topic",
+  "functionType" : "TRANSFORMATION",
+  "source" : "$base64.encode($script)"
+}

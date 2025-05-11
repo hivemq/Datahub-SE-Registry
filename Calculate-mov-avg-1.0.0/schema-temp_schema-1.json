@@ -1,0 +1,8 @@
+#set( $schema = "#include('schema-temp_schema-1-definition.json')")
+{
+  "id" : "${instanceId}-temp_schema-1",
+  "version" : 1,
+  "createdAt" : "2025-05-01T18:37:29.933Z",
+  "type" : "JSON",
+  "schemaDefinition" : "$base64.encode($schema)"
+}
