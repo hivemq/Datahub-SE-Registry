@@ -71,6 +71,33 @@
                     }
                 }
             }
-        }
+        },
+
+        "Alleima-decomposition-1.0.0.module": {
+            "name": "Alleima-decomposition-1.0.0.module",
+            "description": "Alleima-decomposition-1.0.0.module ",
+            "maintainers": [
+                {
+                    "name": "Kamiel Straatman"
+                }
+            ],
+            "versionTags": {
+                "latest": "0.1.0"
+            },
+            "requiredSystemVersions": [
+                "hivemq-enterprise/4.30.0"
+            ],
+            "versions": {
+                "0.1.0": {
+                    "archive": {
+                        "url": "https://raw.githubusercontent.com/hivemq/Datahub-SE-Registry/refs/heads/main/Alleima-decomposition-1.0.0.module",
+                        "shasum512": ""
+                    }
+                }
+            }
+        },
+
+
+        
     }
 }
