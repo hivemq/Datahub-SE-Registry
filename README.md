@@ -2,6 +2,8 @@
 
 HiveMQ datahub modules
 
+Successfully loaded Data Hub modules registry 'HiveMQ:1' from url 'https://releases.hivemq.com/modules/registry.json'.
+
 This repo is meant as a central place to keep, develop and demonstrate HiveMQ datahub modules build and maintained by the Solution engineering department.
 
 add the following section to your brokers config file to enable this Registry:
