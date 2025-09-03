@@ -27,6 +27,7 @@ add the following section to your brokers config file to enable this Registry:
 Module sources and build pipline to be added (KS)
 
 # enable API
+add the following to your config file:
 ```
     <rest-api>
         <enabled>true</enabled>
