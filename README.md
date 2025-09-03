@@ -40,5 +40,5 @@ add the following to your config file:
     </rest-api>
 ```
 
-# enable the testwindows for Datahub:
+# enable the 5 hr test-window for Datahub:
 ```curl  -X POST localhost:8888/api/v1/data-hub/management/start-trial```
