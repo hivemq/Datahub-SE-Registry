@@ -28,7 +28,7 @@ Module sources and build pipline to be added (KS)
 
 # enable API
 add the following to your config file:
-```
+```xml
     <rest-api>
         <enabled>true</enabled>
         <listeners>
