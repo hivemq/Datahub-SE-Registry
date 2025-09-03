@@ -26,6 +26,18 @@ add the following section to your brokers config file to enable this Registry:
 
 Module sources and build pipline to be added (KS)
 
+# enable API
+```
+    <rest-api>
+        <enabled>true</enabled>
+        <listeners>
+            <http>
+                <port>8888</port>
+                <bind-address>127.0.0.1</bind-address>
+            </http>
+        </listeners>
+    </rest-api>
+```
+
 # enable the testwindows for Datahub:
 ```curl  -X POST localhost:8888/api/v1/data-hub/management/start-trial```
-
