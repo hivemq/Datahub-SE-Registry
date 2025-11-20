@@ -23,6 +23,7 @@ after conversion :
 "battery": 4.607,
 "internalTemp": 23,
 "humidity": 80,
-"externalTemp": 19
+"externalTemp": 19 
+}
 ```
 
