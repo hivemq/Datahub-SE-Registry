@@ -72,6 +72,31 @@
                 }
             }
         },
+
+         "hivemq-LoRa-0.1.0.module": {
+            "name": "hivemq-LoRa-0.1.0.module",
+            "description": "hivemq-LoRa KS modified 0.1.0 module",
+            "maintainers": [
+                {
+                    "name": "Kamiel Straatman"
+                }
+            ],
+            "versionTags": {
+                "latest": "0.1.0"
+            },
+            "requiredSystemVersions": [
+                "hivemq-enterprise/4.41.0"
+            ],
+            "versions": {
+                "0.1.0": {
+                    "archive": {
+                        "url": "https://raw.githubusercontent.com/hivemq/Datahub-SE-Registry/refs/heads/main/LoRa/LHT64N-LoRa-decoder-1.0.0.module",
+                        "shasum512": ""
+                    }
+                }
+            }
+        },
+
         "Alleima-decomposition-1.0.0.module": {
             "name": "Alleima-decomposition-1.0.0.module",
             "description": "Alleima-decomposition-1.0.0.module ",
