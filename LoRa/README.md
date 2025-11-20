@@ -10,18 +10,19 @@ LHT65N-E5 LoRaWAN
 mqtt pub -t "Lora/LHT65N/buitensensor" -m test
 mqtt pub -t "Lora/LHT65N/buitensensor" --message-file ./Lora-payl.json
 
-"fCnt": 0,
+```"fCnt": 0,
 "fPort": 85,
 "data": "Ef8A5qAAvo="
+```
 
-after conversion : 
+after conversion :
 
-"fCnt": 0,
+```"fCnt": 0,
 "fPort": 85,
 "data": {
 "battery": 4.607,
 "internalTemp": 23,
 "humidity": 80,
 "externalTemp": 19
+```
 
- 
