@@ -21,7 +21,7 @@
     } ]
   },
   "description" : "Lora decoder for LHT64N",
-  "requiredSystemVersions" : [ "hivemq-enterprise/4.45.0" ],
+  "requiredSystemVersions" : [ "hivemq-enterprise/4.41.0" ],
   "icon" : null,
   "maintainers" : [ {
     "name" : "Kamiel Straatman",
