@@ -82,7 +82,7 @@
                 }
             ],
             "versionTags": {
-                "latest": "0.1.0"
+                "latest": "1.0.0"
             },
             "requiredSystemVersions": [
                 "hivemq-enterprise/4.41.0"
