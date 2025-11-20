@@ -73,7 +73,7 @@
             }
         },
 
-         "hivemq-LoRa-0.1.0.module": {
+         "hivemq-LoRa-1.0.0.module": {
             "name": "hivemq-LoRa-1.0.0.module",
             "description": "hivemq-LoRa KS modified 0.1.0 module",
             "maintainers": [
