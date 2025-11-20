@@ -7,8 +7,11 @@ LHT65N-E5 LoRaWAN
 
 017f6403640a027e64
 
-mqtt pub -t "Lora/LHT65N/buitensensor" -m test
-mqtt pub -t "Lora/LHT65N/buitensensor" --message-file ./Lora-payl.json
+test example
+
+```mqtt pub -t "Lora/LHT65N/buitensensor" --message-file ./Lora-payl.json
+
+```
 
 ```"fCnt": 0,
 "fPort": 85,
