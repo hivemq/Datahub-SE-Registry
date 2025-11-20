@@ -14,7 +14,7 @@ mqtt pub -t "Lora/LHT65N/buitensensor" --message-file ./Lora-payl.json
 "fPort": 85,
 "data": "Ef8A5qAAvo="
 
-after conversion :
+after conversion : 
 
 "fCnt": 0,
 "fPort": 85,
@@ -24,3 +24,4 @@ after conversion :
 "humidity": 80,
 "externalTemp": 19
 
+ 
