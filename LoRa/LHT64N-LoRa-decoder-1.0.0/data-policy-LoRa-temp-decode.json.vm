@@ -1,0 +1,76 @@
+{
+  "id" : "${instanceId}-LoRa-temp-decode",
+  "matching" : {
+    "topicFilter": "${topicFilter}"
+  },
+  "validation" : {
+    "validators" : [ {
+      "type" : "schema",
+      "arguments" : {
+        "strategy" : "ALL_OF",
+        "schemas" : [ {
+          "schemaId" : "${instanceId}-Lora-GW-Schema-1",
+          "version" : "latest"
+        } ]
+      }
+    } ]
+  },
+  "onSuccess" : {
+    "pipeline" : [ {
+      "id" : "operation-Uws04",
+      "functionId" : "System.log",
+      "arguments" : {
+        "level" : "INFO",
+        "message" : "Correct LHT65N recieved from ${clientId}"
+      }
+    }, {
+      "id" : "operation-WCJI9",
+      "functionId" : "Serdes.deserialize",
+      "arguments" : {
+        "schemaVersion" : "latest",
+        "schemaId" : "${instanceId}-Lora-GW-Schema-1"
+      }
+    }, {
+      "id" : "operation-YRWTn",
+      "functionId" : "fn:${instanceId}-decode-LTH64-5:latest",
+      "arguments" : { }
+    }, {
+      "id" : "operation-6LPgA",
+      "functionId" : "System.log",
+      "arguments" : {
+        "level" : "WARN",
+        "message" : "script has run"
+      }
+    }, {
+      "id" : "operation-ZnYVa",
+      "functionId" : "Serdes.serialize",
+      "arguments" : {
+        "schemaVersion" : "latest",
+        "schemaId" : "${instanceId}-output-LHT65N-2"
+      }
+    }, {
+      "id" : "operation-QAUN9",
+      "functionId" : "Delivery.redirectTo",
+      "arguments" : {
+        "topic" : "decoded/${topic}",
+        "applyPolicies" : false
+      }
+    } ]
+  },
+  "onFailure" : {
+    "pipeline" : [ {
+      "id" : "operation-OM8tR",
+      "functionId" : "System.log",
+      "arguments" : {
+        "level" : "WARN",
+        "message" : "Not a JSON formatted  message on Lora/LHT65N/# recieved from ${clientId}"
+      }
+    }, {
+      "id" : "operation-cXnci",
+      "functionId" : "Mqtt.drop",
+      "arguments" : {
+        "reasonString" : "Not a JSON formatted  message on Lora/LHT65N/# recieved from ${clientId}"
+      }
+    } ]
+  }
+}

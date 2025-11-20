@@ -1,0 +1,32 @@
+{
+  "name" : "LHT64N LoRa decoder",
+  "version" : "1.0.0",
+  "resources" : {
+    "files" : [ {
+      "name" : "LoRa-temp-decode",
+      "path" : "data-policy-LoRa-temp-decode.json.vm",
+      "type" : "application/vnd+hivemq.data-policy+json"
+    }, {
+      "name" : "Lora-GW-Schema-1",
+      "path" : "schema-Lora-GW-Schema-1.json",
+      "type" : "application/vnd+hivemq.schema+json"
+    }, {
+      "name" : "output-LHT65N-2",
+      "path" : "schema-output-LHT65N-2.json",
+      "type" : "application/vnd+hivemq.schema+json"
+    }, {
+      "name" : "decode-LTH64-5",
+      "path" : "script-decode-LTH64-5.json",
+      "type" : "application/vnd+hivemq.script+json"
+    } ]
+  },
+  "description" : "Lora decoder for LHT64N",
+  "requiredSystemVersions" : [ "hivemq-enterprise/4.45.0" ],
+  "icon" : null,
+  "maintainers" : [ {
+    "name" : "Kamiel Straatman",
+    "email" : null,
+    "url" : null
+  } ],
+  "availableForLicenses" : [ "light", "full" ]
+}

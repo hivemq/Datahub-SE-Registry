@@ -1,0 +1,8 @@
+#set( $schema = "#include('schema-Lora-GW-Schema-1-definition.json')")
+{
+  "id" : "${instanceId}-Lora-GW-Schema-1",
+  "version" : 1,
+  "createdAt" : "2025-10-22T14:33:08.491Z",
+  "type" : "JSON",
+  "schemaDefinition" : "$base64.encode($schema)"
+}

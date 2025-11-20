@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "applicationID": {
+      "type": "integer"
+    },
+    "applicationName": {
+      "type": "string"
+    },
+    "deviceName": {
+      "type": "string"
+    },
+    "devEUI": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "rxInfo": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "mac": {
+              "type": "string"
+            },
+            "rssi": {
+              "type": "integer"
+            },
+            "loRaSNR": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "latitude": {
+              "type": "integer"
+            },
+            "longitude": {
+              "type": "integer"
+            },
+            "altitude": {
+              "type": "integer"
+            }
+          }
+        }
+      ]
+    },
+    "txInfo": {
+      "type": "object",
+      "properties": {
+        "frequency": {
+          "type": "integer"
+        },
+        "dataRate": {
+          "type": "object",
+          "properties": {
+            "modulation": {
+              "type": "string"
+            },
+            "bandwidth": {
+              "type": "integer"
+            },
+            "spreadFactor": {
+              "type": "integer"
+            }
+          }
+        },
+        "adr": {
+          "type": "boolean"
+        },
+        "codeRate": {
+          "type": "string"
+        }
+      }
+    },
+    "fCnt": {
+      "type": "integer"
+    },
+    "fPort": {
+      "type": "integer"
+    },
+    "data": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "applicationID",
+    "data"
+  ]
+}

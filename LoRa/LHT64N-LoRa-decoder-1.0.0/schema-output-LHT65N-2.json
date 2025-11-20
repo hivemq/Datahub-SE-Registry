@@ -1,0 +1,8 @@
+#set( $schema = "#include('schema-output-LHT65N-2-definition.json')")
+{
+  "id" : "${instanceId}-output-LHT65N-2",
+  "version" : 1,
+  "createdAt" : "2025-10-22T15:16:20.325Z",
+  "type" : "JSON",
+  "schemaDefinition" : "$base64.encode($schema)"
+}

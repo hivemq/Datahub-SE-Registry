@@ -1,0 +1,9 @@
+#set( $script = "#include('script-decode-LTH64-5-source.js')")
+{
+  "id" : "${instanceId}-decode-LTH64-5",
+  "version" : 1,
+  "createdAt" : "2025-10-22T15:08:38.851Z",
+  "description" : "decode-LTH64",
+  "functionType" : "TRANSFORMATION",
+  "source" : "$base64.encode($script)"
+}

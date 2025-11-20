@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "battery": {
+          "type": "number"
+        },
+        "internalTemp": {
+          "type": "integer"
+        },
+        "humidity": {
+          "type": "integer"
+        },
+        "externalTemp": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "battery",
+        "internalTemp",
+        "humidity",
+        "externalTemp"
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+}
