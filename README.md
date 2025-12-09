@@ -1,4 +1,4 @@
-# SE-Datahub Module Registry in GitHub
+# Hivemq SE dept - Datahub Module Registry
 
 HiveMQ datahub modules
 
