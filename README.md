@@ -6,7 +6,9 @@ HiveMQ default repository is located at  'https://releases.hivemq.com/modules/re
 
 This repo is meant as a central place to keep, develop and demonstrate HiveMQ datahub modules build and maintained by the Solution engineering department.
 
-## add the following section to your brokers config file to enable this Registry:
+## To enable this Registry:
+
+add the following section to your brokers config file `./conf/config.xml`
 
 ```xml
 <data-hub>
@@ -21,15 +23,16 @@ This repo is meant as a central place to keep, develop and demonstrate HiveMQ da
         </registries>
     </modules>
 </data-hub>
-
 ```
 
 Module sources and build pipline to be added (KS)
 
 ## Enable the HiveMQ broker API
+
 add the following to your config file:
+
 ```xml
-    <rest-api>
+<rest-api>
         <enabled>true</enabled>
         <listeners>
             <http>
@@ -41,4 +44,6 @@ add the following to your config file:
 ```
 
 ## Start the 5 hr test-window for Datahub:
-```curl  -X POST localhost:8888/api/v1/data-hub/management/start-trial```
+
+`curl  -X POST localhost:8888/api/v1/data-hub/management/start-trial`
+
