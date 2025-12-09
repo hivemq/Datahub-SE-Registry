@@ -119,30 +119,6 @@
                     }
                 }
             }
-        },
-        "countingPubs-1.0.0.module": {
-            "name": "countingPubs-1.0.0.module",
-            "description": "countingPubs-1.0.0.module ",
-            "maintainers": [
-                {
-                    "name": "Kamiel Straatman"
-                }
-            ],
-            "versionTags": {
-                "latest": "1.0.0"
-            },
-            "requiredSystemVersions": [
-                "hivemq-enterprise/4.30.0"
-            ],
-            "versions": {
-                "1.0.0": {
-                    "archive": {
-                        "url": "https://raw.githubusercontent.com/hivemq/Datahub-SE-Registry/refs/heads/main/countingPubs-1.0.0.module",
-                        "shasum512": ""
-                    }
-                }
-            }
         }
     }
 }
-
